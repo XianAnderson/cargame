@@ -22,7 +22,7 @@ function CarView(props) {
       const height = rect.height;
       const clickPos = clickY / height;
       if (clickPos < 0.3) {
-        onClick(x, y); // Top end
+        onClick(x, y); 
       } else if (clickPos > 0.7) {
         onClick(x, y + length - 1); 
       }
