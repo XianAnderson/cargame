@@ -1,0 +1,78 @@
+.board-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.board {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border: 5px solid #9e0000;
+  box-sizing: content-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.cars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  pointer-events: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 360px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.game-info {
+  display: flex;
+  gap: 15px;
+}
+
+.game-info span {
+  font-weight: bold;
+}
+
+.exit-marker {
+  position: absolute;
+  right: -15px;
+  width: 15px;
+  top: calc((3/7) * 100%);
+  height: calc((1/7) * 100%);
+  background-color: #f5f5f5;
+  border-left: 1px solid #9e0000;
+}
+
+@media (max-width: 600px) {
+  .board {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
